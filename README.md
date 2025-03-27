@@ -6,3 +6,15 @@
 - [ ] Complete `load_model.py`. Show uploaded experiment runs (on MLFlow web page) and the console output of running `load_model.py`
 - [ ] Update the training pipeline and register a new version of the model in deliverable 1. Add a meaningful description or tag and explain your choice of classification model to the TA. (The model version number should be updated to 2 (or higher) to refect the change you've made on the UI)
 
+
+**Screenshots:**
+
+![a](Screenshots/1.png)
+
+![a](Screenshots/2.png)
+
+![a](Screenshots/3.png)
+
+![a](Screenshots/4.png)
+
+![a](Screenshots/5.png)
