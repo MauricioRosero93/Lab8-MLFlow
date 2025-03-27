@@ -1,22 +1,24 @@
 import mlflow
 import numpy as np
+import pandas as pd  # Necesario para la conversión
 
-# TODO: Set tht MLFlow server uri
-uri = ___________________
+# Configuración del servidor MLFlow
+uri = "http://127.0.0.1:6001"
 mlflow.set_tracking_uri(uri=uri)
 
-# TODO: Provide model path/url
-logged_model = ___________________
+# Obtener el URI del modelo registrado (debes reemplazarlo con el tuyo)
+# Este URI lo encuentras en la interfaz web de MLFlow
+logged_model = "models:/digits-classifier/latest"
 
-# Load model as a PyFuncModel.
+# Cargar el modelo
 loaded_model = mlflow.sklearn.load_model(logged_model)
 
-# Input a random datapoint
+# Crear datos de prueba
 np.random.seed(42)
 data = np.random.rand(1, 64)
 
-# TODO: Predict the output for the data. You might need to use a pandas DataFrame due to a constraint from MLFlow.
-prediction = loaded_model.predict(___________)
+# Convertir a DataFrame y predecir
+prediction = loaded_model.predict(pd.DataFrame(data))
 
-# Print out prediction result
+# Mostrar resultado
 print(prediction)
